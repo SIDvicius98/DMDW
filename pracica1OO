@@ -1,0 +1,6 @@
+# DMDW
+
+
+SELECT DISTINCT TOP 100 FirstName, LastName,OrderDate
+  FROM [AdventureWorksDW2012].[dbo].[DimCustomer] as A join AdventureWorksDW2012.dbo.FactInternetSales as B on(A.CustomerKey=B.CustomerKey)
+  order by OrderDate desc
